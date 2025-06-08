@@ -1,0 +1,788 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/mainPage.css" asp-append-version="true" />
+}
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/slider.js" asp-append-version="true"></script>
+}
+
+
+@* Banner HTML Başlangıcı *@
+<div class="main-grid">
+    <aside class="sidebar">Kendin Topla</aside>
+
+    <div class="box">
+        <div class="info">
+            <div class="icon">
+                <img src="/icons/down.svg" alt="User Icon" width="12" height="12" />
+            </div>
+            <span>Günün En İyi Fırsatı</span>
+        </div>
+
+        <div class="slider-wrapper" data-slider="urun-slider">
+            <div class="slider">
+                <!-- Ürün 1 -->
+                <div class="product">
+                    <img src="/images/mouse.png" alt="mouse" height="200" width="200" />
+                    <div class="brand">
+                        <img src="/images/asus.png" alt="brand" height="20" width="44" />
+                    </div>
+                    <strong class="name">ASUS ROG HARPE ACE AIM LAB</strong>
+                    <div class="price">3.999 TL</div>
+                </div>
+
+                <!-- Ürün 2 -->
+                <div class="product">
+                    <img src="/images/mouse.png" alt="mouse" height="200" width="200" />
+                    <div class="brand">
+                        <img src="/images/asus.png" alt="brand" height="20" width="44" />
+                    </div>
+                    <strong class="name">ASUS ROG Gladius III</strong>
+                    <div class="price">2.999 TL</div>
+                </div>
+
+                <div class="product">
+                    <img src="/images/mouse.png" alt="mouse" height="200" width="200" />
+                    <div class="brand">
+                        <img src="/images/asus.png" alt="brand" height="20" width="44" />
+                    </div>
+                    <strong class="name">ASUS ROG Gladius III</strong>
+                    <div class="price">2.999 TL</div>
+                </div>
+                <div class="product">
+                    <img src="/images/mouse.png" alt="mouse" height="200" width="200" />
+                    <div class="brand">
+                        <img src="/images/asus.png" alt="brand" height="20" width="44" />
+                    </div>
+                    <strong class="name">ASUS ROG Gladius III</strong>
+                    <div class="price">2.999 TL</div>
+                </div>
+                <!-- Diğer ürünler aynı yapıda çoğaltılabilir -->
+            </div>
+
+            <!-- Slider kontrol butonları -->
+            <button class="prev">‹</button>
+            <button class="next">›</button>
+            <div class="dots-container"></div>
+        </div>
+
+
+
+    </div>
+
+    <div class="box-2">
+        <div class="sub-box">
+            <div class="info">
+                <div class="icon">
+                    <img src="/icons/down.svg" alt="User Icon" width="12" height="12" />
+                </div>
+                <span>En Çok Satan</span>
+            </div>
+            <img src="/images/earphone.png" alt="mouse" height="170" width="170" />
+            <div class="prod-info">
+                <div class="brand">
+                    <img src="/images/razer.png" alt="brand" height="50" width="100" />
+
+                </div>
+                <strong class="name">Razer BlackShark V2 X Green Gaming Kulaklık</strong>
+                <div class="price">3.999 TL</div>
+            </div>
+
+        </div>
+        <div class="sub-box">
+            <div class="info">
+                <div class="icon">
+                    <img src="/icons/down.svg" alt="User Icon" width="12" height="12" />
+                </div>
+                <span>Son Dakikalar</span>
+            </div>
+            <img src="/images/screen.png" alt="mouse" height="170" width="170" />
+            <div class="prod-info">
+                <div class="brand">
+                    <img src="/images/asus.png" alt="brand" height="20" width="44" />
+
+                </div>
+                <strong class="name">ASUS 31.5" TUF GAMING HDR400 Gaming Monitör</strong>
+                <div class="price">3.999 TL</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="box-3">
+        <div class="info">
+            <div class="icon">
+                <img src="/icons/down.svg" alt="User Icon" width="12" height="12" />
+            </div>
+            <span>En Çok Satan Hazır Sistemler</span>
+        </div>
+        <div class="slider-wrapper-1" data-slider="hazir-sistem-slider">
+            <div class="slider-1">
+                <div class="product-1">
+                    <img src="/images/chest.png" alt="mouse" height="320" width="320" />
+                    <div class="prod-info">
+                        <div class="brand">
+                            <img src="/images/amd.png" alt="brand" height="50" width="80" />
+
+                        </div>
+                        <strong class="name">CHEST-V30 / AMD Ryzen 7 8700F / GIGABYTE Radeon RX 9070 16GB / 16GB DDR5 / 1TB M.2 SSD / AMD Radeon Sistem Tavsiyesi</strong>
+                        <div class="price">43.999 TL</div>
+                    </div>
+                </div>
+                <div class="product-1">
+                    <img src="/images/chest.png" alt="mouse" height="320" width="320" />
+                    <div class="prod-info">
+                        <div class="brand">
+                            <img src="/images/amd.png" alt="brand" height="50" width="80" />
+
+                        </div>
+                        <strong class="name">CHEST-V30 / AMD Ryzen 7 8700F / GIGABYTE Radeon RX 9070 16GB / 16GB DDR5 / 1TB M.2 SSD / AMD Radeon Sistem Tavsiyesi</strong>
+                        <div class="price">43.999 TL</div>
+                    </div>
+                </div>
+                <div class="product-1">
+                    <img src="/images/chest.png" alt="mouse" height="320" width="320" />
+                    <div class="prod-info">
+                        <div class="brand">
+                            <img src="/images/amd.png" alt="brand" height="50" width="80" />
+
+                        </div>
+                        <strong class="name">CHEST-V30 / AMD Ryzen 7 8700F / GIGABYTE Radeon RX 9070 16GB / 16GB DDR5 / 1TB M.2 SSD / AMD Radeon Sistem Tavsiyesi</strong>
+                        <div class="price">43.999 TL</div>
+                    </div>
+                </div>
+                <div class="product-1">
+                    <img src="/images/chest.png" alt="mouse" height="320" width="320" />
+                    <div class="prod-info">
+                        <div class="brand">
+                            <img src="/images/amd.png" alt="brand" height="50" width="80" />
+
+                        </div>
+                        <strong class="name">CHEST-V30 / AMD Ryzen 7 8700F / GIGABYTE Radeon RX 9070 16GB / 16GB DDR5 / 1TB M.2 SSD / AMD Radeon Sistem Tavsiyesi</strong>
+                        <div class="price">43.999 TL</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slider kontrol butonları -->
+            <button class="prev-1">‹</button>
+            <button class="next-1">›</button>
+            <div class="dots-container-1"></div>
+        </div>
+
+
+
+    </div>
+</div>
+
+@*Ünlülere ait kampanyaların yani story boxes şeklinde olan kısım başlangıcı*@
+<div class="container new-campaign">
+    <div class="circle new">
+        <img src="/images/jahrein.jpg" alt="brand" />
+    </div>
+    <div class="circle new">
+        <img src="/images/jahrein.jpg" alt="brand" />
+    </div>
+    <div class="circle new">
+        <img src="/images/jahrein.jpg" alt="brand" />
+    </div>
+    <div class="circle">
+        <img src="/images/jahrein.jpg" alt="brand" />
+    </div>
+    <div class="circle">
+        <img src="/images/jahrein.jpg" alt="brand" />
+    </div>
+    <div class="circle">
+        <img src="/images/jahrein.jpg" alt="brand" />
+    </div>
+    <div class="circle">
+        <img src="/images/jahrein.jpg" alt="brand" />
+    </div>
+    <div class="circle">
+        <img src="/images/jahrein.jpg" alt="brand" />
+    </div>
+    <div class="circle">
+        <img src="/images/jahrein.jpg" alt="brand" />
+    </div>
+    <div class="circle">
+        <img src="/images/jahrein.jpg" alt="brand" />
+    </div>
+    <div class="circle">
+        <img src="/images/jahrein.jpg" alt="brand" />
+    </div>
+    <div class="circle">
+        <img src="/images/jahrein.jpg" alt="brand" />
+    </div>
+</div>
+
+
+@* Fırsatlar HTML başlangıcı *@
+<div class="container chance-grid">
+    <div class="box">
+        <img src="/images/intelSerena.png" alt="brand" />
+    </div>
+    <div class="box-2">
+        <img class="main-img" src="/images/5060.png" alt="mouse" height="300" width="380" />
+        <div class="floor">
+            <div class="head">
+                <h3>FIRSAT DIŞARI TAŞTI!</h3>
+                <a href="#">BİLGİSAYAR PARÇALARI</a>
+            </div>
+            <div class="info-part">
+                <img src="/images/asus.png" alt="brand" height="34" width="92" />
+                <strong class="name">ASUS PRIME GeForce RTX 5070 Ti 16GB OC Edition GDDR7 DLSS 4 256 Bit Ekran Kartı</strong>
+                <div class="price">3.999 TL</div>
+            </div>
+        </div>
+    </div>
+    <div class="box-3">
+        <div class="head">
+            <h3>ALIRSAN KAZANIRSIN</h3>
+            <a href="#">DEPOLAMA</a>
+        </div>
+        <div class="product">
+            <div class="sandisk">
+                <img src="/images/sandisk.png" alt="mouse" height="300" width="280" />
+            </div>
+            <div class="info-part">
+                <div class="first">
+                    <p>5000 TL VE ÜZERİ SEPETİNE</p>
+                    <strong class="name">SANDISK 1TB Extreme PRO V2 3.2 USB Siyah Taşınabilir SSD</strong>
+                    <strong class="add">EKLE</strong>
+                </div>
+                <div class="second">
+                    ANINDA 400TL İNDİRİM KAZAN!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* İndirim ve Vade Farksız Taksit HTML başlangıcı *@
+<div class="container discount-grid">
+
+    <div class="discount">
+        <div class="box">
+            <div class="brand">
+                <img src="/images/amd.png" alt="brand" height="50" width="80" />
+            </div>
+            <div class="image">
+                <img src="/images/chest.png" alt="mouse" height="300" width="280" />
+            </div>
+            <div class="disc">%30 İNDİRİM + VADE FARKSIZ TAKSİT</div>
+            <strong class="name">ASUS ROG HARPE ACE AIM LAB Edition Kablosuz Gaming Mouse</strong>
+            <div class="price-part">
+                <span class="real-price">5.200 TL</span>
+                <strong class="discount-price">3.999 TL</strong>
+            </div>
+            <button>SEPETE EKLE</button>
+        </div>
+        <div class="box">
+            <div class="brand">
+                <img src="/images/amd.png" alt="brand" height="50" width="80" />
+            </div>
+            <div class="image">
+                <img src="/images/screen.png" alt="mouse" height="300" width="280" />
+            </div>
+            <div class="disc">%30 İNDİRİM + VADE FARKSIZ TAKSİT</div>
+            <strong class="name">ASUS ROG HARPE ACE AIM LAB Edition Kablosuz Gaming Mouse</strong>
+            <div class="price-part">
+                <span class="real-price">5.200 TL</span>
+                <strong class="discount-price">3.999 TL</strong>
+            </div>
+            <button>SEPETE EKLE</button>
+        </div>
+        <div class="box">
+            <div class="brand">
+                <img src="/images/asus.png" alt="brand" height="24" width="80" />
+            </div>
+            <div class="image">
+                <img src="/images/sandisk.png" alt="mouse" height="300" width="280" />
+            </div>
+            <div class="disc">%30 İNDİRİM + VADE FARKSIZ TAKSİT</div>
+            <strong class="name">ASUS ROG HARPE ACE AIM LAB Edition Kablosuz Gaming Mouse</strong>
+            <div class="price-part">
+                <span class="real-price">5.200 TL</span>
+                <strong class="discount-price">3.999 TL</strong>
+            </div>
+            <button>SEPETE EKLE</button>
+        </div>
+    </div>
+    <div class="notebook">
+        <img src="/images/notebook.png" alt="notebook" />
+    </div>
+</div>
+
+
+@* Kategoriler Css Başlangıcı *@
+<div class="container category-grid">
+    <div class="box">
+        <h1>Notebooklar</h1>
+        <div class="image">
+            <img src="/images/screen.png" alt="mouse" height="300" width="280" />
+        </div>
+    </div>
+    <div class="box">
+        <h1>Hazır Sistemler</h1>
+        <div class="image">
+            <img src="/images/chest.png" alt="mouse" height="300" width="280" />
+        </div>
+    </div>
+    <div class="box">
+        <h1>Depolama</h1>
+        <div class="image">
+            <img src="/images/sandisk.png" alt="mouse" height="300" width="280" />
+        </div>
+    </div>
+    <div class="box">
+        <h1>Monitörler</h1>
+        <div class="image">
+            <img src="/images/screen.png" alt="mouse" height="300" width="280" />
+        </div>
+    </div>
+    <div class="box">
+        <h1>Bilgisayar Parçaları</h1>
+        <div class="image">
+            <img src="/images/5060.png" alt="mouse" height="300" width="280" />
+        </div>
+    </div>
+    <div class="box">
+        <h1>Oyuncu Ekipmanları</h1>
+        <div class="image">
+            <img src="/images/earphone.png" alt="mouse" height="300" width="280" />
+        </div>
+    </div>
+    <div class="box">
+        <h1>Notebooklar</h1>
+        <div class="image">
+            <img src="/images/screen.png" alt="mouse" height="300" width="280" />
+        </div>
+    </div>
+    <div class="box">
+        <h1>Hazır Sistemler</h1>
+        <div class="image">
+            <img src="/images/chest.png" alt="mouse" height="300" width="280" />
+        </div>
+    </div>
+    <div class="box">
+        <h1>Depolama</h1>
+        <div class="image">
+            <img src="/images/sandisk.png" alt="mouse" height="300" width="280" />
+        </div>
+    </div>
+    <div class="box">
+        <h1>Monitörler</h1>
+        <div class="image">
+            <img src="/images/screen.png" alt="mouse" height="300" width="280" />
+        </div>
+    </div>
+    <div class="box">
+        <h1>Bilgisayar Parçaları</h1>
+        <div class="image">
+            <img src="/images/5060.png" alt="mouse" height="300" width="280" />
+        </div>
+    </div>
+    <div class="box">
+        <h1>Oyuncu Ekipmanları</h1>
+        <div class="image">
+            <img src="/images/earphone.png" alt="mouse" height="300" width="280" />
+        </div>
+    </div>
+</div>
+
+
+@* Hazır Sistemler Alanı HTML Başlangıcı *@
+<div class="container system-grid">
+    <div class="head">
+        <h2>Hazır Sistemler</h2>
+        <a href="#">Tümünü Gör</a>
+    </div>
+    <div class="products">
+        <div class="box">
+            <div class="image">
+                <img src="/images/chest.png" alt="mouse" height="300" width="280" />
+            </div>
+            <div class="first">
+                <span>AFK-MD</span>
+                <div class="image">
+                    <img src="https://img-itopya.mncdn.com/cdn/1000/itopya-logo.png" alt="Logo" />
+                </div>
+            </div>
+            <ul class="features">
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">AMD-Ryzen 7 8700F İşlemci</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">
+                        ASUS-AMD A620 Anakart
+                    </span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">XFX-Radeon RX 9060 XT Ekran Kartı</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">GSKILL-16GB (16GB x 1) RAM</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">KIOXIA-1TB,M.2 2280 SSD</span>
+                </li>
+            </ul>
+            <div class="price">24.999,56 TL</div>
+            <div class="button">Sepete Ekle</div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="/images/chest.png" alt="mouse" height="300" width="280" />
+            </div>
+            <div class="first">
+                <span>AFK-MD</span>
+                <div class="image">
+                    <img src="https://img-itopya.mncdn.com/cdn/1000/itopya-logo.png" alt="Logo" />
+                </div>
+            </div>
+            <ul class="features">
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">AMD-Ryzen 7 8700F İşlemci</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">
+                        ASUS-AMD A620 Anakart
+                    </span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">XFX-Radeon RX 9060 XT Ekran Kartı</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">GSKILL-16GB (16GB x 1) RAM</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">KIOXIA-1TB,M.2 2280 SSD</span>
+                </li>
+            </ul>
+            <div class="price">24.999,56 TL</div>
+            <div class="button">Sepete Ekle</div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="/images/chest.png" alt="mouse" height="300" width="280" />
+            </div>
+            <div class="first">
+                <span>AFK-MD</span>
+                <div class="image">
+                    <img src="https://img-itopya.mncdn.com/cdn/1000/itopya-logo.png" alt="Logo" />
+                </div>
+            </div>
+            <ul class="features">
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">AMD-Ryzen 7 8700F İşlemci</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">
+                        ASUS-AMD A620 Anakart
+                    </span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">XFX-Radeon RX 9060 XT Ekran Kartı</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">GSKILL-16GB (16GB x 1) RAM</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">KIOXIA-1TB,M.2 2280 SSD</span>
+                </li>
+            </ul>
+            <div class="price">24.999,56 TL</div>
+            <div class="button">Sepete Ekle</div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="/images/chest.png" alt="mouse" height="300" width="280" />
+            </div>
+            <div class="first">
+                <span>AFK-MD</span>
+                <div class="image">
+                    <img src="https://img-itopya.mncdn.com/cdn/1000/itopya-logo.png" alt="Logo" />
+                </div>
+            </div>
+            <ul class="features">
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">AMD-Ryzen 7 8700F İşlemci</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">
+                        ASUS-AMD A620 Anakart
+                    </span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">XFX-Radeon RX 9060 XT Ekran Kartı</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">GSKILL-16GB (16GB x 1) RAM</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">KIOXIA-1TB,M.2 2280 SSD</span>
+                </li>
+            </ul>
+            <div class="price">24.999,56 TL</div>
+            <div class="button">Sepete Ekle</div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="/images/chest.png" alt="mouse" height="300" width="280" />
+            </div>
+            <div class="first">
+                <span>AFK-MD</span>
+                <div class="image">
+                    <img src="https://img-itopya.mncdn.com/cdn/1000/itopya-logo.png" alt="Logo" />
+                </div>
+            </div>
+            <ul class="features">
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">AMD-Ryzen 7 8700F İşlemci</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">
+                        ASUS-AMD A620 Anakart
+                    </span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">XFX-Radeon RX 9060 XT Ekran Kartı</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">GSKILL-16GB (16GB x 1) RAM</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">KIOXIA-1TB,M.2 2280 SSD</span>
+                </li>
+            </ul>
+            <div class="price">24.999,56 TL</div>
+            <div class="button">Sepete Ekle</div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="/images/chest.png" alt="mouse" height="300" width="280" />
+            </div>
+            <div class="first">
+                <span>AFK-MD</span>
+                <div class="image">
+                    <img src="https://img-itopya.mncdn.com/cdn/1000/itopya-logo.png" alt="Logo" />
+                </div>
+            </div>
+            <ul class="features">
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">AMD-Ryzen 7 8700F İşlemci</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">
+                        ASUS-AMD A620 Anakart
+                    </span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">XFX-Radeon RX 9060 XT Ekran Kartı</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">GSKILL-16GB (16GB x 1) RAM</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">KIOXIA-1TB,M.2 2280 SSD</span>
+                </li>
+            </ul>
+            <div class="price">24.999,56 TL</div>
+            <div class="button">Sepete Ekle</div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="/images/chest.png" alt="mouse" height="300" width="280" />
+            </div>
+            <div class="first">
+                <span>AFK-MD</span>
+                <div class="image">
+                    <img src="https://img-itopya.mncdn.com/cdn/1000/itopya-logo.png" alt="Logo" />
+                </div>
+            </div>
+            <ul class="features">
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">AMD-Ryzen 7 8700F İşlemci</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">
+                        ASUS-AMD A620 Anakart
+                    </span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">XFX-Radeon RX 9060 XT Ekran Kartı</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">GSKILL-16GB (16GB x 1) RAM</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">KIOXIA-1TB,M.2 2280 SSD</span>
+                </li>
+            </ul>
+            <div class="price">24.999,56 TL</div>
+            <div class="button">Sepete Ekle</div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="/images/chest.png" alt="mouse" height="300" width="280" />
+            </div>
+            <div class="first">
+                <span>AFK-MD</span>
+                <div class="image">
+                    <img src="https://img-itopya.mncdn.com/cdn/1000/itopya-logo.png" alt="Logo" />
+                </div>
+            </div>
+            <ul class="features">
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">AMD-Ryzen 7 8700F İşlemci</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">
+                        ASUS-AMD A620 Anakart
+                    </span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">XFX-Radeon RX 9060 XT Ekran Kartı</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">GSKILL-16GB (16GB x 1) RAM</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">KIOXIA-1TB,M.2 2280 SSD</span>
+                </li>
+            </ul>
+            <div class="price">24.999,56 TL</div>
+            <div class="button">Sepete Ekle</div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="/images/chest.png" alt="mouse" height="300" width="280" />
+            </div>
+            <div class="first">
+                <span>AFK-MD</span>
+                <div class="image">
+                    <img src="https://img-itopya.mncdn.com/cdn/1000/itopya-logo.png" alt="Logo" />
+                </div>
+            </div>
+            <ul class="features">
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">AMD-Ryzen 7 8700F İşlemci</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">
+                        ASUS-AMD A620 Anakart
+                    </span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">XFX-Radeon RX 9060 XT Ekran Kartı</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">GSKILL-16GB (16GB x 1) RAM</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">KIOXIA-1TB,M.2 2280 SSD</span>
+                </li>
+            </ul>
+            <div class="price">24.999,56 TL</div>
+            <div class="button">Sepete Ekle</div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="/images/chest.png" alt="mouse" height="300" width="280" />
+            </div>
+            <div class="first">
+                <span>AFK-MD</span>
+                <div class="image">
+                    <img src="https://img-itopya.mncdn.com/cdn/1000/itopya-logo.png" alt="Logo" />
+                </div>
+            </div>
+            <ul class="features">
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">AMD-Ryzen 7 8700F İşlemci</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">
+                        ASUS-AMD A620 Anakart
+                    </span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">XFX-Radeon RX 9060 XT Ekran Kartı</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">GSKILL-16GB (16GB x 1) RAM</span>
+                </li>
+                <li class="li">
+                    <span class="icon"></span>
+                    <span class="feature">KIOXIA-1TB,M.2 2280 SSD</span>
+                </li>
+            </ul>
+            <div class="price">24.999,56 TL</div>
+            <div class="button">Sepete Ekle</div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

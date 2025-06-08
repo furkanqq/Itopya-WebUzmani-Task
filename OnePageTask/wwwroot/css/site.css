@@ -1,0 +1,41 @@
+:root {
+    --color-itopya-blue-navy: #00273a;
+    --color-itopya-orange: #fa9d28;
+    --color-itopya-orange-dark: #f48221;
+    --color-itopya-primary: #003399;
+    --color-itopya-light: #ffffff;
+    --color-itopya-red: #a11515;
+    --color-itopya-success: #64a720;
+}
+/*Çok fazla deðiþen gri tonlarýný root kýsmýna eklemedim*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px !important;
+    padding: 0px;
+}
+
+html {
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    min-height: 100%;
+    font-family: sans-serif
+}
+/*görselden fontu belirleyemedim bu yüzden sans-serif yapýp devam ettim.*/
+
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.container {
+    padding-left: 16px;
+    padding-right: 16px;
+}

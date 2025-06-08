@@ -1,0 +1,940 @@
+﻿
+
+/*Banner CSS Başlangıcı*/
+/*Grid yapısıyla 4 parçaya bölüp bu şekilde oluşturdum.*/
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 60px 1.3fr 2.5fr 4fr;
+    gap: 1rem;
+    min-height: 64vh;
+    padding-top: 1rem;
+}
+/* ilk kısım Kendin Topla alanı */
+    .main-grid .sidebar {
+        background-color: var(--color-itopya-blue-navy);
+        color: white;
+        writing-mode: sideways-lr;
+        text-orientation: mixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 4px 4px 0px;
+        cursor: pointer;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+/*ilk kutu mouse olan kutucuk*/
+    .main-grid .box {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem;
+        border-radius: 4px;
+        background-color: var(--color-itopya-orange-dark);
+    }
+
+        .main-grid .box:after {
+            position: absolute;
+            content: "";
+            z-index: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.20) 15%, rgba(237, 221, 83, 0) 100%);
+        }
+
+        .main-grid .box .info {
+            position: absolute;
+            right: 0;
+            top: 1rem;
+            padding: 4px 8px 4px 8px;
+            border-radius: 4px 0px 0px 4px;
+            background-color: var(--color-itopya-red);
+            color: var(--color-itopya-light);
+            font-weight: 500;
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            z-index: 2;
+        }
+
+            .main-grid .box .info .icon {
+                position: relative;
+                width: 12px;
+                height: 12px;
+            }
+
+                .main-grid .box .info .icon img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+
+        .main-grid .box .product {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+            .main-grid .box .product .brand {
+                width: 52px;
+                height: 20px;
+                z-index: 1;
+                position: relative;
+            }
+
+                .main-grid .box .product .brand img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+
+            .main-grid .box .product img {
+                z-index: 1;
+            }
+
+            .main-grid .box .product .name {
+                text-align: center;
+                color: var(--color-itopya-light);
+                font-weight: 500;
+                z-index: 1;
+                margin-top: 12px;
+            }
+
+            .main-grid .box .product .price {
+                font-size: 24px;
+                background-color: #ffd9aaa6;
+                margin-top: 12px;
+                padding: 4px 8px;
+                z-index: 1;
+                border-radius: 4px;
+            }
+
+
+
+        .main-grid .box .slider-wrapper {
+            width: 216px; /* itemWidth kadar */
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .main-grid .box .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .main-grid .box .product {
+            flex: 0 0 216px; /* sabit genişlik */ /*            width: 200px;*/
+            margin-right: 16px;
+        }
+
+        .main-grid .box .prev,
+        .main-grid .box .next {
+            position: absolute;
+            top: 30%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            color: black;
+            border: none;
+            padding: 0.5rem 1rem;
+            z-index: 2;
+            cursor: pointer;
+            font-size: 40px;
+            border-radius: 4px;
+        }
+
+        .main-grid .box .prev {
+            left: 0;
+        }
+
+        .main-grid .box .next {
+            right: 0;
+        }
+
+        .main-grid .box .dots-container {
+            position: absolute;
+            text-align: center;
+            width: 90%;
+            bottom: 10px;
+        }
+
+        .main-grid .box .dot {
+            display: inline-block;
+            width: 20px;
+            height: 8px;
+            background-color: #ffffff90;
+            border-radius: 12px;
+            margin: 0 2px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+            .main-grid .box .dot.active {
+                background-color: var(--color-itopya-light);
+            }
+
+/*2. kutu double box olan kulaklık ve monitör olan kutucuk*/
+    .main-grid .box-2 {
+        display: grid !important;
+        grid-template-rows: 1fr 1fr !important;
+        padding: 0px;
+        gap: 1rem;
+        background-color: var(--color-itopya-light);
+    }
+
+        .main-grid .box-2 .sub-box {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            border-radius: 4px;
+            padding: 0.5rem;
+            background-color: var(--color-itopya-orange-dark);
+            width: 100%;
+            gap: 24px;
+        }
+
+            .main-grid .box-2 .sub-box:after {
+                position: absolute;
+                content: "";
+                z-index: 0;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+                background: #ffffff;
+                background: radial-gradient(circle, rgba(255, 255, 255, 0.20) 15%, rgba(237, 221, 83, 0) 100%);
+            }
+
+            .main-grid .box-2 .sub-box img {
+                z-index: 1;
+            }
+
+            .main-grid .box-2 .sub-box .info {
+                position: absolute;
+                z-index: 2;
+                right: 0;
+                top: 1rem;
+                padding: 4px 8px 4px 8px;
+                border-radius: 4px 0px 0px 4px;
+                background-color: var(--color-itopya-red);
+                color: var(--color-itopya-light);
+                font-weight: 500;
+                display: flex;
+                gap: 4px;
+                align-items: center;
+            }
+
+                .main-grid .box-2 .sub-box .info .icon {
+                    position: relative;
+                    width: 12px;
+                    height: 12px;
+                }
+
+                    .main-grid .box-2 .sub-box .info .icon img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+
+            .main-grid .box-2 .sub-box .prod-info {
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 200px;
+            }
+
+                .main-grid .box-2 .sub-box .prod-info .name {
+                    text-align: center;
+                    color: var(--color-itopya-light);
+                    font-weight: 500;
+                    width: 80%;
+                    margin-top: 12px;
+                }
+
+                .main-grid .box-2 .sub-box .prod-info .price {
+                    font-size: 24px;
+                    background-color: #ffd9aaa6;
+                    margin-top: 12px;
+                    padding: 4px 8px;
+                    border-radius: 4px;
+                    width: fit-content;
+                }
+
+
+    /*3. kutu kasa olan kutucuk*/
+    .main-grid .box-3 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        border-radius: 4px;
+        background-color: var(--color-itopya-orange-dark);
+    }
+
+
+        .main-grid .box-3:after {
+            position: absolute;
+            content: "";
+            z-index: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.20) 15%, rgba(237, 221, 83, 0) 100%);
+        }
+
+        .main-grid .box-3 .product-1 img {
+            z-index: 1;
+        }
+
+        .main-grid .box-3 .info {
+            position: absolute;
+            z-index: 2;
+            right: 0;
+            top: 1rem;
+            padding: 4px 8px 4px 8px;
+            border-radius: 4px 0px 0px 4px;
+            background-color: var(--color-itopya-red);
+            color: var(--color-itopya-light);
+            font-weight: 500;
+            display: flex;
+            gap: 4px;
+            align-items: center;
+        }
+
+            .main-grid .box-3 .info .icon {
+                position: relative;
+                width: 12px;
+                height: 12px;
+            }
+
+                .main-grid .box-3 .info .icon img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+
+        .main-grid .box-3 .product-1 {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            gap: 24px;
+        }
+
+            .main-grid .box-3 .product-1 .prod-info {
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 200px;
+            }
+
+                .main-grid .box-3 .product-1 .prod-info .name {
+                    text-align: center;
+                    color: var(--color-itopya-light);
+                    font-weight: 500;
+                    width: 100%;
+                    margin-top: 12px;
+                }
+
+                .main-grid .box-3 .product-1 .prod-info .price {
+                    font-size: 24px;
+                    background-color: #ffd9aaa6;
+                    margin-top: 12px;
+                    padding: 4px 8px;
+                    border-radius: 4px;
+                    width: fit-content;
+                }
+
+
+        .main-grid .box-3 .slider-wrapper-1 {
+            width: 616px; /* itemWidth kadar */
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .main-grid .box-3 .slider-1 {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .main-grid .box-3 .product-1 {
+            flex: 0 0 616px; /* sabit genişlik */ /*            width: 200px;*/
+            margin-right: 16px;
+        }
+
+        .main-grid .box-3 .prev-1,
+        .main-grid .box-3 .next-1 {
+            position: absolute;
+            top: 30%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            color: black;
+            border: none;
+            padding: 0.5rem 1rem;
+            z-index: 2;
+            cursor: pointer;
+            font-size: 40px;
+            border-radius: 4px;
+        }
+
+        .main-grid .box-3 .prev-1 {
+            left: 0;
+        }
+
+        .main-grid .box-3 .next-1 {
+            right: 0;
+        }
+
+        .main-grid .box-3 .dots-container-1 {
+            position: absolute;
+            text-align: center;
+            width: 85%;
+            bottom: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-grid .box-3 .dot-1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: #ffffff90;
+            border-radius: 12px;
+            margin: 0 2px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+        }
+
+            .main-grid .box-3 .dot-1.active-1 {
+                background-color: var(--color-itopya-light);
+            }
+/*Banner CSS Sonu*/
+
+/*Ünlülere ait kampanyaların yani story boxes şeklinde olan kısım başlangıcı*/
+.new-campaign {
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    gap: 20px;
+}
+
+    .new-campaign .circle {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        border: 4px solid var(--color-itopya-orange-dark);
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+        .new-campaign .circle:hover {
+            border: 4px dashed var(--color-itopya-orange-dark);
+        }
+
+        .new-campaign .circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+/*Fırsatlar CSS başlangıcı*/
+.chance-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 3fr;
+    gap: 1rem;
+    min-height: 60vh;
+    padding-top: 1rem;
+    padding-inline: 60px;
+}
+
+    .chance-grid .box {
+        position: relative;
+        overflow: hidden;
+        border-radius: 4px;
+    }
+
+        .chance-grid .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    .chance-grid .box-2 {
+        position: relative;
+    }
+
+        .chance-grid .box-2 .main-img {
+            position: absolute;
+            top: 50%;
+            left: 53%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .chance-grid .box-2 .floor {
+            background-color: var(--color-itopya-red);
+            width: 90%;
+            height: 100%;
+            padding: 24px 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 4px;
+        }
+
+            .chance-grid .box-2 .floor:after {
+                position: absolute;
+                content: "";
+                z-index: 0;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+                background: #ffffff;
+                background: radial-gradient(circle, rgba(255, 255, 255, 0.20) 15%, rgba(237, 221, 83, 0) 100%);
+            }
+
+            .chance-grid .box-2 .floor .head h3 {
+                font-size: 36px;
+                color: var(--color-itopya-light);
+                margin-bottom: 8px;
+            }
+
+            .chance-grid .box-2 .floor .head a {
+                color: var(--color-itopya-light);
+            }
+
+            .chance-grid .box-2 .floor .info-part {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+            }
+
+
+                .chance-grid .box-2 .floor .info-part .name {
+                    text-align: center;
+                    color: var(--color-itopya-light);
+                    font-weight: 500;
+                    z-index: 1;
+                    margin-top: 12px;
+                    width: 80%;
+                }
+
+                .chance-grid .box-2 .floor .info-part .price {
+                    font-size: 24px;
+                    background-color: var(--color-itopya-light);
+                    margin-top: 12px;
+                    padding: 4px 8px;
+                    border-radius: 4px;
+                    width: fit-content;
+                }
+
+
+    .chance-grid .box-3 {
+        background-color: var(--color-itopya-success);
+        padding: 24px 24px;
+        border-radius: 4px;
+        position: relative;
+    }
+
+        .chance-grid .box-3:after {
+            position: absolute;
+            content: "";
+            z-index: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.20) 15%, rgba(237, 221, 83, 0) 100%);
+        }
+
+        .chance-grid .box-3 .head h3 {
+            font-size: 36px;
+            color: var(--color-itopya-light);
+            margin-bottom: 8px;
+            width: 50%;
+        }
+
+        .chance-grid .box-3 .head a {
+            color: var(--color-itopya-light);
+        }
+
+        .chance-grid .box-3 .product {
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 32px;
+        }
+
+            .chance-grid .box-3 .product .sandisk {
+                height: 380px;
+                width: 252px;
+                position: relative;
+            }
+
+                .chance-grid .box-3 .product .sandisk img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+            .chance-grid .box-3 .product .info-part {
+                position: relative;
+                margin-top: 100px;
+                width: 40%;
+            }
+
+                .chance-grid .box-3 .product .info-part .first {
+                    background-color: var(--color-itopya-light);
+                    height: 60%;
+                    margin-bottom: 4px;
+                    border-radius: 4px;
+                    padding: 16px 8px;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                    .chance-grid .box-3 .product .info-part .first p {
+                        font-size: 14px;
+                    }
+
+                    .chance-grid .box-3 .product .info-part .first .name {
+                        font-size: 18px;
+                        line-height: 28px;
+                        margin-block: 8px;
+                        font-weight: 700;
+                    }
+
+                    .chance-grid .box-3 .product .info-part .first .add {
+                        font-size: 20px;
+                    }
+
+                .chance-grid .box-3 .product .info-part .second {
+                    background-color: var(--color-itopya-red);
+                    background-color: var(--color-itopya-red);
+                    color: var(--color-itopya-light);
+                    height: 40%;
+                    border-radius: 4px;
+                    padding: 16px 12px;
+                    text-align: center;
+                    align-content: center;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 38px;
+                }
+/*Fırsatlar CSS sonu*/
+
+
+/*İndirim ve Vade Farksız Taksit CSS başlangıcı*/
+.discount-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 1rem;
+    min-height: 50vh;
+    padding-top: 1rem;
+    padding-inline: 60px;
+}
+
+    .discount-grid .discount {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: #fae9df;
+        border-radius: 4px;
+        overflow: hidden;
+        border: 2px solid #e5cabb;
+    }
+
+
+        .discount-grid .discount .box {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+            padding: 8px 4px;
+            position: relative;
+        }
+
+            .discount-grid .discount .box:nth-child(2) {
+                border-left: 2px solid #e5cabb;
+                border-right: 2px solid #e5cabb;
+            }
+
+            .discount-grid .discount .box .brand {
+                position: absolute;
+                left: 12px;
+                top: 4px;
+                width: 60px;
+                height: 32px;
+            }
+
+                .discount-grid .discount .box .brand img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+
+            .discount-grid .discount .box .image {
+                height: 160px;
+                width: 200px;
+                position: relative;
+            }
+
+                .discount-grid .discount .box .image img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+
+
+            .discount-grid .discount .box .disc {
+                background-color: var(--color-itopya-red);
+                color: var(--color-itopya-light);
+                text-align: center;
+                padding-inline: 24px;
+                padding-block: 4px;
+                font-size: 16px;
+                font-weight: bold;
+                border-radius: 4px;
+                letter-spacing: 2px;
+            }
+
+            .discount-grid .discount .box .name {
+                text-align: center;
+                padding-inline: 24px;
+                font-size: 16px;
+            }
+
+            .discount-grid .discount .box button {
+                text-align: center;
+                width: 100%;
+                background-color: var(--color-itopya-red);
+                padding-block: 8px;
+                color: var(--color-itopya-light);
+                font-size: 16px;
+                font-weight: 500;
+                border: none;
+                outline: none;
+                border-radius: 4px;
+            }
+
+            .discount-grid .discount .box .price-part {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+            }
+
+                .discount-grid .discount .box .price-part .discount-price {
+                    text-align: center;
+                    font-size: 24px;
+                }
+
+                .discount-grid .discount .box .price-part .real-price {
+                    text-align: center;
+                    font-size: 14px;
+                    text-decoration: line-through;
+                    color: gray;
+                }
+
+    .discount-grid .notebook {
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+    }
+
+        .discount-grid .notebook img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+/*İndirim ve Vade Farksız Taksit CSS sonu*/
+
+
+/*Kategoriler Css Başlangıcı*/
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    min-height: 50vh;
+    padding-block: 2rem;
+    padding-inline: 60px;
+    background-color: #f4cfd3;
+    margin-top: 2rem;
+}
+
+    .category-grid .box {
+        width: 200px;
+        height: 200px;
+        background-color: var(--color-itopya-light);
+        padding: 12px 8px;
+        border-radius: 4px;
+        border: 1px solid #dca5ab;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .category-grid .box h1 {
+            font-size: 18px;
+            margin-bottom: 4px;
+            width: 100%;
+        }
+
+        .category-grid .box .image {
+            width: 152px;
+            height: 140px;
+            position: relative;
+        }
+
+            .category-grid .box .image img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+/*Kategoriler Css Sonu*/
+
+
+/*Hazır Sistemler Alanı Css Başlangıcı*/
+.system-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-height: 50vh;
+    padding-top: 2rem;
+}
+
+    .system-grid .head {
+        background-color: #ddd;
+        display: flex;
+        gap: 12px;
+        padding: 16px 24px;
+        border-radius: 4px;
+        align-items: center;
+    }
+
+    .system-grid .products {
+        min-height: 80vh;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-left: 12px;
+    }
+
+        .system-grid .products .box {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid a1a1a1;
+            box-shadow: 0px 0px 12px 0px #a1a1a1;
+            border-radius: 8px;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 8px;
+            width: 252px;
+            height: 440px;
+            overflow: hidden;
+        }
+
+            .system-grid .products .box .image {
+                height: 180px;
+                width: 160px;
+                position: relative;
+            }
+
+                .system-grid .products .box .image img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                }
+
+            .system-grid .products .box .first {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 4px;
+            }
+
+                .system-grid .products .box .first .image {
+                    height: 20px;
+                    width: 80px;
+                    position: relative;
+                }
+
+            .system-grid .products .box .features {
+                list-style: none;
+            }
+
+                .system-grid .products .box .features .li {
+                    width: fit-content;
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    margin-bottom: 2px;
+                }
+
+                    .system-grid .products .box .features .li .icon {
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        background-color: black;
+                    }
+
+                    .system-grid .products .box .features .li .feature {
+                        font-size: 12px;
+                    }
+
+
+            .system-grid .products .box .price {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            .system-grid .products .box .button {
+                font-size: 16px;
+                background-color: var(--color-itopya-orange-dark);
+                width: 100%;
+                text-align: center;
+                color: var(--color-itopya-light);
+                padding-block: 12px;
+            }
+
+/*Hazır Sistemler Alanı Css Sonu*/
+
