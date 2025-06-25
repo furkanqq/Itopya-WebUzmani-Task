@@ -9,8 +9,8 @@ WORKDIR /src
 
 COPY . .
 
-RUN dotnet restore "OnePageTask.csproj"
-RUN dotnet publish "OnePageTask.csproj" -c Release -o /app/publish
+RUN dotnet restore "./OnePageTask.csproj"
+RUN dotnet publish "./OnePageTask.csproj" -c Release -o /app/publish
 
 # --- final image ---
 FROM base AS final
