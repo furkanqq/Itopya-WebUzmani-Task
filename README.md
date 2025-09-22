@@ -1,5 +1,11 @@
 # İtopya Ana Sayfa Tasarımı - Frontend Task
 
+
+
+https://github.com/user-attachments/assets/e01f5d89-6e8a-4127-b312-b5f220984ce5
+
+
+
 ## Proje Hakkında
 
 Bu proje, verilen bir tasarım görseline uygun olarak hazırlanmış bir web sitesi ana sayfası frontend implementasyonudur.  
